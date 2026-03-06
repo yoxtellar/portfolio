@@ -126,41 +126,42 @@ main { padding-bottom: 80px; }
     display: block;
 }
 
-/* 1. 枠の背景をサイトと同じ黒にしておく（正方形になった時の左右の余白を綺麗に見せるため） */
+/* 1. 外側の枠：16:9比率を維持 */
 .thumb-wrap {
     position: relative;
     aspect-ratio: 16/9;
     overflow: hidden;
-    background: var(--bg); 
+    background: #000; /* 余白は真っ黒に */
 }
 
-/* 1. 画像の通常時：中央部分をズームして表示している状態 */
+/* 2. 画像本体：最初は枠いっぱいに表示（cover） */
 .thumb-wrap img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* これは維持 */
+    object-fit: cover; 
+    object-position: center; /* 中央基準 */
     display: block;
     filter: grayscale(20%) brightness(0.85);
     
-    /* 2.4秒かけて、非常にゆったりと変化させる */
+    /* アンビエントな質感のための transition */
+    /* object-fit の変化を 1.2秒かけてゆっくり計算させる */
     transition: 
-        filter 1.2s cubic-bezier(0.25, 1, 0.5, 1),
-        transform 1.8s cubic-bezier(0.22, 1, 0.36, 1);
-    
-    /* 最初は少し拡大しておく（16:9の枠に正方形をフィットさせるため） */
-    transform: scale(1.1); 
+        filter 1.2s ease,
+        object-fit 1.2s ease,
+        object-position 1.2s ease,
+        transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* 2. ホバー時：ぬるぬるっと引いて全体を見せる */
+/* 3. ホバー時：枠内に収める（contain） */
 .work-item:hover .thumb-wrap img {
     filter: grayscale(0%) brightness(1);
     
-    /* scaleを1以下（0.56など）にすることで、
-       16:9の枠の中で正方形の画像が「引いて」全体が見えるようになります。
-    */
-    transform: scale(0.5625); /* 9 / 16 = 0.5625 */
+    /* ぬるっと全体表示（どんな比率でもOK） */
+    object-fit: contain; 
     
-    /* object-fitは変えずに、scaleの計算だけで全体を見せるのがパキッとさせないコツです */
+    /* 念のため transform も少しだけ動かすと、
+       ブラウザの再描画が促されてアニメーションがより滑らかになります */
+    transform: scale(1.001); 
 }
 
 .work-overlay {
