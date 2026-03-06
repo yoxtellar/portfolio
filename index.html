@@ -45,24 +45,32 @@
   fetch('works.json')
     .then(function(r) { return r.json(); })
     .then(function(works) {
+        
+        // ▼▼▼ ここから追加：日付で新しい順（降順）に並び替える処理 ▼▼▼
+        works.sort(function(a, b) {
+            // 日付の「.」を「/」に変換して、プログラムが計算できる時間データにする
+            var timeA = a.date ? new Date(a.date.replace(/\./g, '/')).getTime() : 0;
+            var timeB = b.date ? new Date(b.date.replace(/\./g, '/')).getTime() : 0;
+            return timeB - timeA; // 新しいものが上に来るようにする
+        });
+        // ▲▲▲ ここまで追加 ▲▲▲
+
         var grid = document.getElementById('worksGrid');
         works.forEach(function(w, i) {
             var tagLabel = w.tag.replace('-', ' / ');
             var dateHtml = w.date ? '<div class="work-date">' + w.date + '</div>' : '';
 
-            // 1. デフォルト画像のパス（用意したNo Image画像のファイル名に合わせてください）
-            var defaultImg = 'assets/images/yoxtellar_logo_A_reverse.png';
-            
-            // 2. JSONのthumbが空っぽ("")ならデフォルト画像を使う
+            var defaultImg = 'assets/images/default.jpg';
             var thumbSrc = w.thumb ? w.thumb : defaultImg;
 
-            // 3. imgタグの中に onerror を追加して、リンク切れの時もデフォルト画像を表示
             var inner = '<div class="thumb-wrap"><img src="' + thumbSrc + '" onerror="this.src=\'' + defaultImg + '\'" alt="' + w.title + '" loading="lazy"><div class="work-overlay"><span class="overlay-arrow">&rarr;</span></div></div><div class="work-info"><div class="work-meta"><span class="work-tag">' + tagLabel + '</span>' + dateHtml + '</div><div class="work-title">' + w.title + '</div></div>';
 
             var item = document.createElement('div');
             item.className = 'work-item';
             item.dataset.tag = w.tag;
+            // 並び替えたあとの順番(i)に合わせて、フワッと表示するアニメーションのタイミングをズラす
             item.style.animationDelay = (i * 0.05) + 's';
+            
             if (w.url) {
                 var a = document.createElement('a');
                 a.href = w.url;
