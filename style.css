@@ -292,6 +292,21 @@ footer span {
     color: var(--muted);
     letter-spacing: 0.1em;
 }
+/* サイト全体のアンビエント出現演出 */
+header {
+    animation: fadeIn 2.4s cubic-bezier(0.25, 1, 0.5, 1) both;
+    animation-delay: 0.1s; /* 開いてすぐにフワッと */
+}
+
+.filters {
+    animation: fadeIn 2.4s cubic-bezier(0.25, 1, 0.5, 1) both;
+    animation-delay: 0.5s; /* ヘッダーの少し後にフワッと */
+}
+
+footer {
+    animation: fadeIn 2.4s cubic-bezier(0.25, 1, 0.5, 1) both;
+    animation-delay: 1.0s; /* 一番最後にフワッと */
+}
 
 /* 変更前 */
 /*
