@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>yoxtellar</title>
+<!-- Adobe Fonts: _config.ymlの代わりにここを編集 -->
+<!-- <link rel="stylesheet" href="https://use.typekit.net/XXXXXXX.css"> -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <a class="logo" href="index.html">yoxtellar</a>
+  <nav>
+    <a href="index.html" id="nav-works">works</a>
+    <a href="profile.html" id="nav-profile">profile</a>
+    <a href="contact.html" id="nav-contact">contact</a>
+  </nav>
+</header>
+
+<main>
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all">all</button>
+    <button class="filter-btn" data-filter="composer">composer</button>
+    <button class="filter-btn" data-filter="live">live</button>
+    <button class="filter-btn" data-filter="release">release</button>
+    <button class="filter-btn" data-filter="vr-metaverse">vr / metaverse</button>
+  </div>
+  <div class="grid" id="worksGrid"></div>
+</main>
+
+<footer>
+  <span>© yoxtellar</span>
+  <div class="social-links">
+    <a href="#">tw</a>
+    <a href="#">sc</a>
+    <a href="#">bc</a>
+  </div>
+</footer>
+
+<script>
+fetch('works.json')
+  .then(r => r.json())
+  .then(works => {
+    const grid = document.getElementById('worksGrid');
+    works.forEach((w, i) => {
+      const tagLabel = w.tag.replace('-', ' / ');
+      const inner = `
+        <div class="thumb-wrap">
+          <img src="${w.thumb}" alt="${w.title}" loading="lazy">
+          <div class="work-overlay"><span class="overlay-arrow">→</span></div>
+        </div>
+        <div class="work-info">
+          <div class="work-tag">${tagLabel}</div>
+          <div class="work-title">${w.title}</div>
+        </div>`;
+      const item = document.createElement('div');
+      item.className = 'work-item';
+      item.dataset.tag = w.tag;
+      item.style.animationDelay = `${i * 0.05}s`;
+      if (w.url) {
+        const a = document.createElement('a');
+        a.href = w.url;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        a.innerHTML = inner;
+        item.appendChild(a);
+      } else {
+        item.innerHTML = inner;
+      }
+      grid.appendChild(item);
+    });
+  });
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const tag = btn.dataset.filter;
+    document.querySelectorAll('.work-item').forEach(item => {
+      item.dataset.hidden = (tag !== 'all' && item.dataset.tag !== tag) ? 'true' : 'false';
+    });
+  });
+});
+</script>
+</body>
+</html>
