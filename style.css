@@ -93,12 +93,34 @@ main { padding-bottom: 80px; }
     gap: 2px;
 }
 
-@media (max-width: 720px) {
-    .grid { grid-template-columns: repeat(2, 1fr); }
+/* --- レスポンシブ設定（切り替えポイントを早めに変更） --- */
+
+/* 3列 → 2列 になるポイント（1200px以下で切り替え） */
+@media (max-width: 1200px) {
+    .grid { 
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .work-detail {
+        grid-column: 1 / span 2;
+    }
 }
 
-@media (max-width: 460px) {
-    .grid { grid-template-columns: 1fr; }
+/* 2列 → 1列 になるポイント（800px以下で切り替え） */
+@media (max-width: 800px) {
+    .grid { 
+        grid-template-columns: 1fr; 
+    }
+    .work-detail {
+        grid-column: 1 / span 1;
+    }
+    
+    /* スマホで見やすくするために余白を少し調整 */
+    .detail-inner {
+        padding: 20px;
+    }
+    .work-title {
+        font-size: 0.9rem;
+    }
 }
 
 /* 変更前 */
