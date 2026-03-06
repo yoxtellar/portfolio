@@ -1,26 +1,37 @@
 [
-  {
-    "title": "作品タイトルをここに",
-    "tag": "composer",
-    "thumb": "assets/images/work1.jpg",
-    "url": ""
-  },
-  {
-    "title": "作品タイトルをここに",
-    "tag": "live",
-    "thumb": "assets/images/work2.jpg",
-    "url": ""
-  },
-  {
-    "title": "作品タイトルをここに",
-    "tag": "release",
-    "thumb": "assets/images/work3.jpg",
-    "url": ""
-  },
-  {
-    "title": "作品タイトルをここに",
-    "tag": "vr-metaverse",
-    "thumb": "assets/images/work4.jpg",
-    "url": ""
-  }
+    {
+          "title": "大阪・関西万博 EXPOホール「シャインハット」投影用アンビエント作品 / こみゃくシミュレーション映像",
+          "tag": "composer",
+          "thumb": "assets/images/expo2025.jpg",
+          "url": "https://www.instagram.com/reel/DNHQQNsy7H2/",
+          "date": "2025.8.14"
+    },
+    {
+          "title": "Sanrio Virtual Festival 2025 — キヌ パフォーマンス 作曲・ミックス・マスタリング・サウンドデザイン",
+          "tag": "composer",
+          "thumb": "assets/images/sanrio2025.jpg",
+          "url": "",
+          "date": "2025.3.2"
+    },
+    {
+          "title": "Musical Treasure Hunt—Spectral Remix / 新作サンリオキャラクターミニパレード 作曲・サウンドデザイン",
+          "tag": "composer",
+          "thumb": "assets/images/sanrio2024.jpg",
+          "url": "",
+          "date": "2024.9.13"
+    },
+    {
+          "title": "はじまりはおわり、（feat.kinu）",
+          "tag": "release",
+          "thumb": "assets/images/hajimari.jpg",
+          "url": "",
+          "date": "2023.1.21"
+    },
+    {
+          "title": "Perfect World meets Jimmy",
+          "tag": "release",
+          "thumb": "assets/images/perfectworld.jpg",
+          "url": "",
+          "date": "2022.9.2"
+    }
 ]
