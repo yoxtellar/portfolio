@@ -93,6 +93,24 @@
             `;
             
             grid.appendChild(item);
+          // クリックイベントの追加
+            item.querySelector('.work-trigger').addEventListener('click', function() {
+                var isActive = item.classList.contains('is-active');
+                
+                // すべてのアイテムから is-active を消して一旦閉じる（これが「他を閉じる」機能）
+                document.querySelectorAll('.work-item').forEach(function(el) {
+                    el.classList.remove('is-active');
+                });
+                
+                // クリックしたものが元々閉じていたなら、開く
+                if (!isActive) {
+                    item.classList.add('is-active');
+                    // 開いた場所までぬるっとスクロールさせる（アンビエントな気遣い）
+                    setTimeout(function() {
+                        item.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }, 300);
+                }
+            });
         });
     });
 
