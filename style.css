@@ -113,8 +113,8 @@ main { padding-bottom: 80px; }
 /* 変更後 ▼コピペして上書きしてください▼ */
 .work-item {
     overflow: hidden;
-    background: var(--border);
-    /* 秒数を2.4sに伸ばし、ゆったりとしたイージング(cubic-bezier)に変更 */
+    /* 変更前: background: var(--border); */
+    background: var(--bg); /* ここを背景と同じ黒 (#080808) に変更 */
     animation: fadeIn 2.4s cubic-bezier(0.25, 1, 0.5, 1) both;
 }
 
