@@ -56,45 +56,42 @@
 
         var grid = document.getElementById('worksGrid');
         works.forEach(function(w, i) {
-            
-            // ▼▼▼ 複数タグ対応：文字列を確実にカンマで分割する ▼▼▼
-            var rawTags = Array.isArray(w.tag) ? w.tag : w.tag.split(',');
-            // 余計なスペースを消して小文字に統一
-            var cleanTags = rawTags.map(function(t) { return t.trim().toLowerCase(); });
-            
-            // 画面表示用
+            var tagArray = Array.isArray(w.tag) ? w.tag : w.tag.split(',');
+            var cleanTags = tagArray.map(function(t) { return t.trim().toLowerCase(); });
             var tagLabel = cleanTags.map(function(t) { return t.replace('-', ' / '); }).join(', ');
-            // ▲▲▲ ここまで ▲▲▲
-
             var dateHtml = w.date ? '<div class="work-date">' + w.date + '</div>' : '';
-
             var defaultImg = 'assets/images/yoxtellar_logo_A_reverse.png';
             var thumbSrc = w.thumb ? w.thumb : defaultImg;
 
-            var inner = '<div class="thumb-wrap"><img src="' + thumbSrc + '" onerror="this.src=\'' + defaultImg + '\'" alt="' + w.title + '" loading="lazy"><div class="work-overlay"><span class="overlay-arrow">&rarr;</span></div></div><div class="work-info"><div class="work-meta"><span class="work-tag">' + tagLabel + '</span>' + dateHtml + '</div><div class="work-title">' + w.title + '</div></div>';
-
+            // HTML構造の組み立て
             var item = document.createElement('div');
             item.className = 'work-item';
-            
-            // 複数タグを裏側に保存
             item.dataset.tags = cleanTags.join(',');
-            
-            // 変更前
-            // item.style.animationDelay = (i * 0.15) + 's';
+            item.style.animationDelay = (i * 0.15 + 0.8) + 's';
 
-            // ▼▼ 変更後：最初に「0.8秒」の待ち時間を足す ▼▼
-            item.style.animationDelay = (i * 0.15 + 0.1) + 's';
+            // 詳細エリア（アコーディオンの中身）の作成
+            // urlがある場合はリンクボタンを表示、ない場合は説明文だけ
+            var linkHtml = w.url ? '<a href="' + w.url + '" target="_blank" rel="noopener" class="detail-link">View Project &rarr;</a>' : '';
             
-            if (w.url) {
-                var a = document.createElement('a');
-                a.href = w.url;
-                a.target = '_blank';
-                a.rel = 'noopener';
-                a.innerHTML = inner;
-                item.appendChild(a);
-            } else {
-                item.innerHTML = inner;
-            }
+            item.innerHTML = `
+                <div class="work-trigger">
+                    <div class="thumb-wrap">
+                        <img src="${thumbSrc}" onerror="this.src='${defaultImg}'" alt="${w.title}" loading="lazy">
+                        <div class="work-overlay"><span class="overlay-arrow">&darr;</span></div>
+                    </div>
+                    <div class="work-info">
+                        <div class="work-meta"><span class="work-tag">${tagLabel}</span>${dateHtml}</div>
+                        <div class="work-title">${w.title}</div>
+                    </div>
+                </div>
+                <div class="work-detail">
+                    <div class="detail-inner">
+                        <div class="detail-text">${w.description || 'No description available.'}</div>
+                        ${linkHtml}
+                    </div>
+                </div>
+            `;
+            
             grid.appendChild(item);
         });
     });
