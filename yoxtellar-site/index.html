@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<div class="filters">
+  <button class="filter-btn active" data-filter="all">all</button>
+  <button class="filter-btn" data-filter="composer">composer</button>
+  <button class="filter-btn" data-filter="live">live</button>
+  <button class="filter-btn" data-filter="release">release</button>
+  <button class="filter-btn" data-filter="vr-metaverse">vr / metaverse</button>
+</div>
+
+<div class="grid" id="worksGrid">
+  {% for work in site.data.works %}
+  <div class="work-item" data-tag="{{ work.tag }}">
+    {% if work.url and work.url != '' %}
+    <a href="{{ work.url }}" target="_blank" rel="noopener">
+    {% endif %}
+      <div class="thumb-wrap">
+        <img src="{{ work.thumb | relative_url }}" alt="{{ work.title }}" loading="lazy">
+        <div class="work-overlay"><span class="overlay-arrow">→</span></div>
+      </div>
+      <div class="work-info">
+        <div class="work-tag">{{ work.tag | replace: '-', ' / ' }}</div>
+        <div class="work-title">{{ work.title }}</div>
+      </div>
+    {% if work.url and work.url != '' %}
+    </a>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>

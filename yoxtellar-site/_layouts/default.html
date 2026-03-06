@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+{% if site.adobe_fonts_id %}
+<link rel="stylesheet" href="https://use.typekit.net/{{ site.adobe_fonts_id }}.css">
+{% endif %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+{% seo %}
+</head>
+<body>
+
+<header>
+  <a class="logo" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+  <nav>
+    <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>works</a>
+    <a href="{{ '/profile/' | relative_url }}" {% if page.url contains 'profile' %}class="active"{% endif %}>profile</a>
+    <a href="{{ '/contact/' | relative_url }}" {% if page.url contains 'contact' %}class="active"{% endif %}>contact</a>
+  </nav>
+</header>
+
+<main>
+  {{ content }}
+</main>
+
+<footer>
+  <span>© {{ site.title }}</span>
+  <div class="social-links">
+    <a href="#">tw</a>
+    <a href="#">sc</a>
+    <a href="#">bc</a>
+  </div>
+</footer>
+
+<script src="{{ '/assets/js/filter.js' | relative_url }}"></script>
+</body>
+</html>

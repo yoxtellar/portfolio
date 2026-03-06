@@ -1,0 +1,23 @@
+# ここに作品を追加するだけでサイトに反映されます
+# tag は composer / live / release / vr-metaverse のいずれか
+# thumb は assets/images/ に置いた画像ファイル名、またはURLも可
+
+- title: "作品タイトル"
+  tag: composer
+  thumb: "assets/images/work1.jpg"
+  url: "https://soundcloud.com/..."  # クリック先URL（任意）
+
+- title: "作品タイトル"
+  tag: live
+  thumb: "assets/images/work2.jpg"
+  url: ""
+
+- title: "作品タイトル"
+  tag: release
+  thumb: "assets/images/work3.jpg"
+  url: ""
+
+- title: "作品タイトル"
+  tag: vr-metaverse
+  thumb: "assets/images/work4.jpg"
+  url: ""
