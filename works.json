@@ -21,17 +21,94 @@
           "date": "2024.9.13"
     },
     {
-          "title": "はじまりはおわり、（feat.kinu）",
-          "tag": "release",
+          "title": "Sanrio Virtual Festival 2023 — キヌ パフォーマンス 作曲・ミックス・マスタリング・サウンドデザイン"",
+          "tag": "composer",
           "thumb": "assets/images/sanrio2023.jpg",
           "url": "",
           "date": "2023.1.21"
     },
     {
-          "title": "Perfect World meets Jimmy",
-          "tag": "release",
+          "title": "小説ジミーオリジナル楽曲「Perfect World meets Jimmy」制作",
+          "tag": "composer",
           "thumb": "assets/images/perfectworld.jpg",
           "url": "",
           "date": "2022.9.2"
+    },
+    {
+        "title": "solitary departure",
+        "tag": "release",
+        "thumb": "assets/images/solitary_departure.jpg",
+        "url": "",
+        "date": "2024.12.25"
+    },
+    {
+        "title": "Sound Adventure Log",
+        "tag": "release",
+        "thumb": "assets/images/sound_adventure_log.jpg",
+        "url": "",
+        "date": "2024.10.27"
+    },
+    {
+        "title": "emergence!",
+        "tag": "release",
+        "thumb": "assets/images/emergence.jpg",
+        "url": "",
+        "date": "2023.10.29"
+    },
+    {
+        "title": "wisteria",
+        "tag": "release",
+        "thumb": "assets/images/wisteria.jpg",
+        "url": "",
+        "date": "2023.10.29"
+    },
+    {
+        "title": "はじまりはおわり、feat. kinu",
+        "tag": "release",
+        "thumb": "assets/images/hajimari_wa_owari.jpg",
+        "url": "",
+        "date": "2023.5.14"
+    },
+    {
+        "title": "Friend Ship",
+        "tag": "release",
+        "thumb": "assets/images/friend_ship.jpg",
+        "url": "",
+        "date": "2022.7.11"
+    },
+    {
+        "title": "Life goes on EP",
+        "tag": "release",
+        "thumb": "assets/images/life_goes_on_ep.jpg",
+        "url": "",
+        "date": "2022.4.15"
+    },
+    {
+        "title": "My Brave Story EP",
+        "tag": "release",
+        "thumb": "assets/images/my_brave_story_ep.jpg",
+        "url": "",
+        "date": "2021.11.14"
+    },
+    {
+        "title": "Perfect World",
+        "tag": "release",
+        "thumb": "assets/images/perfect_world.jpg",
+        "url": "https://youtu.be/IXncPcRNziw",
+        "date": "2021.7.16"
+    },
+    {
+        "title": "Flowers in the Cage",
+        "tag": "release",
+        "thumb": "assets/images/flowers_in_the_cage.jpg",
+        "url": "",
+        "date": "2020.12.4"
+    },
+    {
+        "title": "e-vacillation",
+        "tag": "release",
+        "thumb": "assets/images/e_vacillation.jpg",
+        "url": "",
+        "date": "2019.5.20"
     }
 ]
