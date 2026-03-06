@@ -134,22 +134,33 @@ main { padding-bottom: 80px; }
     background: var(--bg); 
 }
 
-/* 2. 画像の通常時：枠いっぱいに広げる（上下は見切れる） */
+/* 1. 画像の通常時：中央部分をズームして表示している状態 */
 .thumb-wrap img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* これは維持 */
     display: block;
     filter: grayscale(20%) brightness(0.85);
-    /* ここが「ぬるっと」の魔法！0.8秒かけてアンビエントなカーブで変化させる */
-    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    
+    /* 2.4秒かけて、非常にゆったりと変化させる */
+    transition: 
+        filter 1.2s cubic-bezier(0.25, 1, 0.5, 1),
+        transform 1.8s cubic-bezier(0.22, 1, 0.36, 1);
+    
+    /* 最初は少し拡大しておく（16:9の枠に正方形をフィットさせるため） */
+    transform: scale(1.1); 
 }
 
-/* 3. マウスホバー時：全体を表示するモード（contain）に切り替える */
+/* 2. ホバー時：ぬるぬるっと引いて全体を見せる */
 .work-item:hover .thumb-wrap img {
     filter: grayscale(0%) brightness(1);
-    object-fit: contain; /* coverからcontainにぬるっと変化 */
-    transform: scale(1); /* 元々あった少し拡大する処理を消して、等倍で全体を見せる */
+    
+    /* scaleを1以下（0.56など）にすることで、
+       16:9の枠の中で正方形の画像が「引いて」全体が見えるようになります。
+    */
+    transform: scale(0.5625); /* 9 / 16 = 0.5625 */
+    
+    /* object-fitは変えずに、scaleの計算だけで全体を見せるのがパキッとさせないコツです */
 }
 
 .work-overlay {
