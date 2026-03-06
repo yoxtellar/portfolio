@@ -293,7 +293,24 @@ footer span {
     letter-spacing: 0.1em;
 }
 
+/* 変更前 */
+/*
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(8px); }
     to { opacity: 1; transform: translateY(0); }
+}
+*/
+
+/* 変更後 ▼コピペして上書きしてください▼ */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); /* 8pxから20pxに変更して、少し下から浮かび上がらせる */
+        filter: blur(4px); /* (おまけ) ほんの少しだけボケからピントが合う演出を追加 */
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+        filter: blur(0);
+    }
 }
