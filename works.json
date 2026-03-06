@@ -110,5 +110,61 @@
         "thumb": "assets/images/e_vacillation.jpg",
         "url": "",
         "date": "2019.5.20"
+    },
+    {
+        "title": "our intelligence 3 release party 出演@新宿SPACE",
+        "tag": "live",
+        "thumb": "assets/images/our_intelligence.jpg",
+        "url": "",
+        "date": "2024.11"
+    },
+    {
+        "title": "ASTRA4 出演@VRChat",
+        "tag": "live",
+        "thumb": "assets/images/astra4.jpg",
+        "url": "",
+        "date": "2024.4"
+    },
+    {
+        "title": "Glitch Jazz in VRC Glitch Live PAを担当@VRChat",
+        "tag": "live",
+        "thumb": "assets/images/glitch_jazz.jpg",
+        "url": "",
+        "date": "2023.11"
+    },
+    {
+        "title": "#BRAINBREAK_VRC 出演＠VRChat",
+        "tag": "live",
+        "thumb": "assets/images/brainbreak.jpg",
+        "url": "",
+        "date": "2022.12"
+    },
+    {
+        "title": "lJUS 3/20211024 \"Lab\" 出演@VRChat",
+        "tag": "live",
+        "thumb": "assets/images/ljus.jpg",
+        "url": "",
+        "date": "2021.11"
+    },
+    {
+        "title": "AMENZOOSTREAM 出演@Twitch",
+        "tag": "live",
+        "thumb": "assets/images/amenzoostream.jpg",
+        "url": "",
+        "date": "2020.11"
+    },
+    {
+        "title": "AmenZoo @Amsterdam",
+        "tag": "live",
+        "thumb": "assets/images/amenzoo_amsterdam.jpg",
+        "url": "",
+        "date": "2019.9"
+    },
+    {
+        "title": "ANGURA vol.9 @Vancouver",
+        "tag": "live",
+        "thumb": "assets/images/angura.jpg",
+        "url": "",
+        "date": "2018.3"
     }
 ]
