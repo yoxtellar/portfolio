@@ -8,21 +8,21 @@
     },
     {
         "title": "Sanrio Virtual Festival 2025 — キヌ パフォーマンス 作曲・ミックス・マスタリング・サウンドデザイン",
-        "tag": ["composer", "vr-metaverse", "audio engineering"],
+        "tag": ["composer", "metaverse", "engineering"],
         "thumb": "assets/images/sanrio2025.jpg",
         "url": "",
         "date": "2025.3.2"
     },
     {
         "title": "Musical Treasure Hunt—Spectral Remix / 新作サンリオキャラクターミニパレード 作曲・サウンドデザイン",
-        "tag": ["composer", "vr-metaverse"],
+        "tag": ["composer", "metaverse"],
         "thumb": "assets/images/sanrio2024.jpg",
         "url": "",
         "date": "2024.9.13"
     },
     {
         "title": "Sanrio Virtual Festival 2023 — キヌ パフォーマンス 作曲・ミックス・マスタリング・サウンドデザイン",
-        "tag": ["composer", "vr-metaverse"],
+        "tag": ["composer", "metaverse"],
         "thumb": "assets/images/sanrio2023.jpg",
         "url": "",
         "date": "2023.1.21"
@@ -120,28 +120,28 @@
     },
     {
         "title": "ASTRA4 出演@VRChat",
-        "tag": ["live", "vr-metaverse"],
+        "tag": ["live", "metaverse"],
         "thumb": "assets/images/astra4.jpg",
         "url": "",
         "date": "2024.4"
     },
     {
         "title": "Glitch Jazz in VRC Glitch Live PAを担当@VRChat",
-        "tag": ["live", "vr-metaverse"],
+        "tag": ["live", "metaverse"],
         "thumb": "assets/images/glitch_jazz.jpg",
         "url": "",
         "date": "2023.11"
     },
     {
         "title": "#BRAINBREAK_VRC 出演＠VRChat",
-        "tag": ["live", "vr-metaverse"],
+        "tag": ["live", "metaverse"],
         "thumb": "assets/images/brainbreak.jpg",
         "url": "",
         "date": "2022.12"
     },
     {
         "title": "lJUS 3/20211024 \"Lab\" 出演@VRChat",
-        "tag": ["live", "vr-metaverse"],
+        "tag": ["live", "metaverse"],
         "thumb": "assets/images/ljus.jpg",
         "url": "",
         "date": "2021.11"
