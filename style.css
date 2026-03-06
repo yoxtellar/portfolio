@@ -126,42 +126,32 @@ main { padding-bottom: 80px; }
     display: block;
 }
 
-/* 1. 外側の枠：16:9比率を維持 */
+/* 1. 外側の枠：16:9比率を維持。背景を真っ黒にして余白を馴染ませる */
 .thumb-wrap {
     position: relative;
     aspect-ratio: 16/9;
     overflow: hidden;
-    background: #000; /* 余白は真っ黒に */
+    background: #000; 
 }
 
-/* 2. 画像本体：最初は枠いっぱいに表示（cover） */
+/* 2. 画像本体：通常は枠いっぱいに表示（cover） */
 .thumb-wrap img {
     width: 100%;
     height: 100%;
     object-fit: cover; 
-    object-position: center; /* 中央基準 */
     display: block;
     filter: grayscale(20%) brightness(0.85);
     
-    /* アンビエントな質感のための transition */
-    /* object-fit の変化を 1.2秒かけてゆっくり計算させる */
-    transition: 
-        filter 1.2s ease,
-        object-fit 1.2s ease,
-        object-position 1.2s ease,
-        transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+    /* filter や不透明度の変化だけを「ぬるっと」させる */
+    transition: filter 1.2s ease, opacity 1.2s ease;
 }
 
-/* 3. ホバー時：枠内に収める（contain） */
+/* 3. ホバー時：パキッと全体表示（contain）に切り替える */
 .work-item:hover .thumb-wrap img {
     filter: grayscale(0%) brightness(1);
     
-    /* ぬるっと全体表示（どんな比率でもOK） */
+    /* マウスを乗せた瞬間に、どんな比率の画像でも枠内に収まる */
     object-fit: contain; 
-    
-    /* 念のため transform も少しだけ動かすと、
-       ブラウザの再描画が促されてアニメーションがより滑らかになります */
-    transform: scale(1.001); 
 }
 
 .work-overlay {
