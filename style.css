@@ -203,14 +203,35 @@ main { padding-bottom: 80px; }
     font-weight: 300;
     color: var(--fg);
 }
-/* アコーディオンの土台（最初は高さ0） */
+/* アコーディオンの土台 */
 .work-detail {
-    grid-column: 1 / -1; /* グリッドの端から端まで広げる */
+    /* 修正前: grid-column: 1 / -1; */
+    /* 修正後: グリッドの全範囲をカバーする指定をより安全な書き方に */
+    grid-column: 1 / span 3; 
+    
     max-height: 0;
     overflow: hidden;
     background: #0d0d0d;
     transition: max-height 0.8s cubic-bezier(0.25, 1, 0.5, 1);
-    border-bottom: 0px solid var(--border);
+}
+
+/* スマホ用（メディアクエリ）の中を修正 */
+@media (max-width: 720px) {
+    .grid { 
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .work-detail {
+        grid-column: 1 / span 2; /* 2列の時は2列分広がる */
+    }
+}
+
+@media (max-width: 460px) {
+    .grid { 
+        grid-template-columns: 1fr; /* 1列 */
+    }
+    .work-detail {
+        grid-column: 1 / span 1; /* 1列の時は1列分広がる */
+    }
 }
 
 /* 開いた時の状態 */
