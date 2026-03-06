@@ -23,8 +23,8 @@
     {
         "title": "Sanrio Virtual Festival 2023 — キヌ パフォーマンス 作曲・ミックス・マスタリング・サウンドデザイン",
         "tag": ["composer", "metaverse"],
-        "thumb": "assets/images/sanrio2023.jpg",
-        "url": "",
+        "thumb": "https://img.youtube.com/vi/LwDbrmUhdN0/maxresdefault.jpg",
+        "url": "https://youtu.be/LwDbrmUhdN0",
         "date": "2023.1.21"
     },
     {
@@ -35,37 +35,44 @@
         "date": "2022.9.2"
     },
     {
+        "title": "トーチライト feat.kinu Single Release",
+        "tag": "release",
+        "thumb": "https://f4.bcbits.com/img/a1605349625_10.jpg",
+        "url": "https://yot-kun.bandcamp.com/album/feat-kinu-2",
+        "date": "2025.6.29"
+    },
+    {
         "title": "solitary departure",
         "tag": "release",
-        "thumb": "assets/images/solitary_departure.jpg",
-        "url": "",
+        "thumb": "https://i1.sndcdn.com/artworks-P9kPR9mjLOL0iJDt-ktk4vA-t1080x1080.jpg",
+        "url": "https://soundcloud.com/yoxtellar/solitary-departure",
         "date": "2024.12.25"
     },
     {
         "title": "Sound Adventure Log",
         "tag": "release",
-        "thumb": "assets/images/sound_adventure_log.jpg",
-        "url": "",
+        "thumb": "https://img.youtube.com/vi/DIWOgh0tSj4?si=q9YJ5VGAm6nFH2uA/maxresdefault.jpg",
+        "url": "https://youtu.be/DIWOgh0tSj4?si=q9YJ5VGAm6nFH2uA",
         "date": "2024.10.27"
     },
     {
         "title": "emergence!",
         "tag": "release",
-        "thumb": "assets/images/emergence.jpg",
-        "url": "",
+        "thumb": "https://img.youtube.com/vi/JNLpsOv8GI8/maxresdefault.jpg",
+        "url": "https://youtu.be/JNLpsOv8GI8",
         "date": "2023.10.29"
     },
     {
         "title": "wisteria",
         "tag": "release",
-        "thumb": "assets/images/wisteria.jpg",
-        "url": "",
+        "thumb": "https://img.youtube.com/vi/R0Ij85PKCKI?si=t5oEvnHH_9-FIyoC/maxresdefault.jpg",
+        "url": "https://youtu.be/R0Ij85PKCKI?si=t5oEvnHH_9-FIyoC",
         "date": "2023.10.29"
     },
     {
         "title": "はじまりはおわり、feat. kinu",
         "tag": "release",
-        "thumb": "assets/images/hajimari_wa_owari.jpg",
+        "thumb": "https://img.youtube.com/vi/LwDbrmUhdN0/maxresdefault.jpg",
         "url": "",
         "date": "2023.5.14"
     },
@@ -79,15 +86,15 @@
     {
         "title": "Life goes on EP",
         "tag": "release",
-        "thumb": "assets/images/life_goes_on_ep.jpg",
-        "url": "",
+        "thumb": "https://i1.sndcdn.com/artworks-XD0dTPDPtX5JWVUz-mxXHPA-t1080x1080.jpg",
+        "url": "https://youtu.be/DlF3gm22Hm4?si=9lLOafVm5dXbmfFE",
         "date": "2022.4.15"
     },
     {
         "title": "My Brave Story EP",
         "tag": "release",
-        "thumb": "assets/images/my_brave_story_ep.jpg",
-        "url": "",
+        "thumb": "https://f4.bcbits.com/img/a0162034650_10.jpg",
+        "url": "https://yot-kun.bandcamp.com/album/my-brave-story-ep",
         "date": "2021.11.14"
     },
     {
@@ -107,35 +114,35 @@
     {
         "title": "e-vacillation",
         "tag": "release",
-        "thumb": "assets/images/e_vacillation.jpg",
-        "url": "",
+        "thumb": "https://f4.bcbits.com/img/a3462619655_10.jpg",
+        "url": "https://yot-kun.bandcamp.com/album/e-vacillation",
         "date": "2019.5.20"
     },
     {
         "title": "our intelligence 3 release party 出演@新宿SPACE",
         "tag": "live",
-        "thumb": "assets/images/our_intelligence.jpg",
+        "thumb": "assets/images/oi3r.jpg",
         "url": "",
         "date": "2024.11"
     },
     {
         "title": "ASTRA4 出演@VRChat",
         "tag": ["live", "metaverse"],
-        "thumb": "assets/images/astra4.jpg",
+        "thumb": "assets/images/astr.jpg",
         "url": "",
         "date": "2024.4"
     },
     {
         "title": "Glitch Jazz in VRC Glitch Live PAを担当@VRChat",
         "tag": ["live", "metaverse"],
-        "thumb": "assets/images/glitch_jazz.jpg",
+        "thumb": "assets/images/gj.jpg",
         "url": "",
         "date": "2023.11"
     },
     {
         "title": "#BRAINBREAK_VRC 出演＠VRChat",
         "tag": ["live", "metaverse"],
-        "thumb": "assets/images/brainbreak.jpg",
+        "thumb": "assets/images/bb.jpg",
         "url": "",
         "date": "2022.12"
     },
@@ -149,21 +156,21 @@
     {
         "title": "AMENZOOSTREAM 出演@Twitch",
         "tag": "live",
-        "thumb": "assets/images/amenzoostream.jpg",
+        "thumb": "assets/images/amenzoos.jpg",
         "url": "",
         "date": "2020.11"
     },
     {
         "title": "AmenZoo @Amsterdam",
         "tag": "live",
-        "thumb": "assets/images/amenzoo_amsterdam.jpg",
+        "thumb": "assets/images/amenzoo.jpg",
         "url": "",
         "date": "2019.9"
     },
     {
         "title": "ANGURA vol.9 @Vancouver",
         "tag": "live",
-        "thumb": "assets/images/angura.jpg",
+        "thumb": "assets/images/angura.jpeg",
         "url": "",
         "date": "2018.3"
     }
