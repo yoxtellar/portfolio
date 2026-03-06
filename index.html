@@ -46,8 +46,7 @@
   fetch('works.json')
     .then(function(r) { return r.json(); })
     .then(function(works) {
-        
-        // 日付で新しい順（降順）に並び替える処理
+        // 1. 日付で新しい順（降順）に並び替え
         works.sort(function(a, b) {
             var timeA = a.date ? new Date(a.date.replace(/\./g, '/')).getTime() : 0;
             var timeB = b.date ? new Date(b.date.replace(/\./g, '/')).getTime() : 0;
@@ -55,24 +54,31 @@
         });
 
         var grid = document.getElementById('worksGrid');
+        
+        // 既存の中身を一旦空にする（二重表示防止）
+        grid.innerHTML = '';
+
         works.forEach(function(w, i) {
-            var tagArray = Array.isArray(w.tag) ? w.tag : w.tag.split(',');
-            var cleanTags = tagArray.map(function(t) { return t.trim().toLowerCase(); });
+            // タグの処理（複数対応・小文字統一）
+            var rawTags = Array.isArray(w.tag) ? w.tag : (w.tag ? w.tag.split(',') : ['other']);
+            var cleanTags = rawTags.map(function(t) { return t.trim().toLowerCase(); });
             var tagLabel = cleanTags.map(function(t) { return t.replace('-', ' / '); }).join(', ');
-            var dateHtml = w.date ? '<div class="work-date">' + w.date + '</div>' : '';
+            
+            var dateHtml = w.date ? `<div class="work-date">${w.date}</div>` : '';
             var defaultImg = 'assets/images/yoxtellar_logo_A_reverse.png';
             var thumbSrc = w.thumb ? w.thumb : defaultImg;
+            var description = w.description || 'No description available.';
+            var linkHtml = w.url ? `<a href="${w.url}" target="_blank" rel="noopener" class="detail-link">View Project &rarr;</a>` : '';
 
-            // HTML構造の組み立て
+            // アイテム要素の作成
             var item = document.createElement('div');
             item.className = 'work-item';
             item.dataset.tags = cleanTags.join(',');
+            
+            // アンビエントな出現ディレイ
             item.style.animationDelay = (i * 0.15 + 0.8) + 's';
 
-            // 詳細エリア（アコーディオンの中身）の作成
-            // urlがある場合はリンクボタンを表示、ない場合は説明文だけ
-            var linkHtml = w.url ? '<a href="' + w.url + '" target="_blank" rel="noopener" class="detail-link">View Project &rarr;</a>' : '';
-            
+            // 構造を流し込む（閉じタグミスを防ぐバッククォート記法）
             item.innerHTML = `
                 <div class="work-trigger">
                     <div class="thumb-wrap">
@@ -86,34 +92,39 @@
                 </div>
                 <div class="work-detail">
                     <div class="detail-inner">
-                        <div class="detail-text">${w.description || 'No description available.'}</div>
+                        <div class="detail-text">${description}</div>
                         ${linkHtml}
                     </div>
                 </div>
             `;
             
             grid.appendChild(item);
-          // クリックイベントの追加
+
+            // クリックイベント：自分を開き、他を閉じる
             item.querySelector('.work-trigger').addEventListener('click', function() {
                 var isActive = item.classList.contains('is-active');
                 
-                // すべてのアイテムから is-active を消して一旦閉じる（これが「他を閉じる」機能）
+                // 全てのアクティブを解除
                 document.querySelectorAll('.work-item').forEach(function(el) {
                     el.classList.remove('is-active');
                 });
                 
-                // クリックしたものが元々閉じていたなら、開く
+                // クリックしたものが閉じていれば開く
                 if (!isActive) {
                     item.classList.add('is-active');
-                    // 開いた場所までぬるっとスクロールさせる（アンビエントな気遣い）
+                    // 展開を待ってからスクロール
                     setTimeout(function() {
                         item.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                    }, 300);
+                    }, 400);
                 }
             });
         });
+    })
+    .catch(function(err) {
+        console.error("JSON読み込みエラー:", err);
     });
 
+  // フィルターボタンの処理
   document.querySelectorAll('.filter-btn').forEach(function(btn) {
     btn.addEventListener('click', function() {
         document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
@@ -121,8 +132,10 @@
         
         var targetTag = btn.dataset.filter.toLowerCase();
         document.querySelectorAll('.work-item').forEach(function(item) {
-            var itemTags = item.dataset.tags.split(',');
+            var itemTags = (item.dataset.tags || "").split(',');
             item.dataset.hidden = (targetTag !== 'all' && !itemTags.includes(targetTag)) ? 'true' : 'false';
+            // フィルター時はアコーディオンを閉じる
+            item.classList.remove('is-active');
         });
     });
   });
