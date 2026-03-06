@@ -46,18 +46,24 @@
     .then(function(r) { return r.json(); })
     .then(function(works) {
         
-        // ▼▼▼ ここから追加：日付で新しい順（降順）に並び替える処理 ▼▼▼
+        // 日付で新しい順（降順）に並び替える処理
         works.sort(function(a, b) {
-            // 日付の「.」を「/」に変換して、プログラムが計算できる時間データにする
             var timeA = a.date ? new Date(a.date.replace(/\./g, '/')).getTime() : 0;
             var timeB = b.date ? new Date(b.date.replace(/\./g, '/')).getTime() : 0;
-            return timeB - timeA; // 新しいものが上に来るようにする
+            return timeB - timeA;
         });
-        // ▲▲▲ ここまで追加 ▲▲▲
 
         var grid = document.getElementById('worksGrid');
         works.forEach(function(w, i) {
-            var tagLabel = w.tag.replace('-', ' / ');
+            
+            // ▼▼▼ 複数タグ対応の魔法 ▼▼▼
+            // データが配列じゃない場合（従来の書き方）も自動で配列に変換してエラーを防ぎます
+            var tagArray = Array.isArray(w.tag) ? w.tag : [w.tag];
+            
+            // 画面表示用（例: "composer, vr / metaverse" のようにカンマ区切りで表示）
+            var tagLabel = tagArray.map(function(t) { return t.replace('-', ' / '); }).join(', ');
+            // ▲▲▲ ここまで ▲▲▲
+
             var dateHtml = w.date ? '<div class="work-date">' + w.date + '</div>' : '';
 
             var defaultImg = 'assets/images/default.jpg';
@@ -67,8 +73,10 @@
 
             var item = document.createElement('div');
             item.className = 'work-item';
-            item.dataset.tag = w.tag;
-            // 並び替えたあとの順番(i)に合わせて、フワッと表示するアニメーションのタイミングをズラす
+            
+            // ▼▼▼ 複数タグを裏側に保存 ▼▼▼
+            item.dataset.tags = tagArray.join(',');
+            
             item.style.animationDelay = (i * 0.05) + 's';
             
             if (w.url) {
@@ -89,9 +97,12 @@
     btn.addEventListener('click', function() {
         document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
         btn.classList.add('active');
-        var tag = btn.dataset.filter;
+        
+        var targetTag = btn.dataset.filter;
         document.querySelectorAll('.work-item').forEach(function(item) {
-            item.dataset.hidden = (tag !== 'all' && item.dataset.tag !== tag) ? 'true' : 'false';
+            // ▼▼▼ フィルター処理：設定されたタグの中に、クリックしたボタンのタグが含まれているかチェック ▼▼▼
+            var itemTags = item.dataset.tags.split(',');
+            item.dataset.hidden = (targetTag !== 'all' && !itemTags.includes(targetTag)) ? 'true' : 'false';
         });
     });
   });
