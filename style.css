@@ -96,7 +96,7 @@ main { padding-bottom: 80px; }
 /* --- レスポンシブ設定（切り替えポイントを早めに変更） --- */
 
 /* 3列 → 2列 になるポイント（1200px以下で切り替え） */
-@media (max-width: 1200px) {
+@media (max-width: 2400px) {
     .grid { 
         grid-template-columns: repeat(2, 1fr); 
     }
@@ -106,7 +106,7 @@ main { padding-bottom: 80px; }
 }
 
 /* 2列 → 1列 になるポイント（800px以下で切り替え） */
-@media (max-width: 800px) {
+@media (max-width: 1600px) {
     .grid { 
         grid-template-columns: 1fr; 
     }
