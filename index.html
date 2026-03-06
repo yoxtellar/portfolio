@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>yoxtellar</title>
-  <!-- Adobe Fonts: use.typekit.net のコードをここに入れる -->
-  <!-- <link rel="stylesheet" href="https://use.typekit.net/XXXXXXX.css"> -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>yoxtellar</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  </head>
+</head>
 <body>
 
   <header>
@@ -59,12 +57,13 @@
         var grid = document.getElementById('worksGrid');
         works.forEach(function(w, i) {
             
-            // ▼▼▼ 複数タグ対応の魔法 ▼▼▼
-            // データが配列じゃない場合（従来の書き方）も自動で配列に変換してエラーを防ぎます
-            var tagArray = Array.isArray(w.tag) ? w.tag : [w.tag];
+            // ▼▼▼ 複数タグ対応：文字列を確実にカンマで分割する ▼▼▼
+            var rawTags = Array.isArray(w.tag) ? w.tag : w.tag.split(',');
+            // 余計なスペースを消して小文字に統一
+            var cleanTags = rawTags.map(function(t) { return t.trim().toLowerCase(); });
             
-            // 画面表示用（例: "composer, vr / metaverse" のようにカンマ区切りで表示）
-            var tagLabel = tagArray.map(function(t) { return t.replace('-', ' / '); }).join(', ');
+            // 画面表示用
+            var tagLabel = cleanTags.map(function(t) { return t.replace('-', ' / '); }).join(', ');
             // ▲▲▲ ここまで ▲▲▲
 
             var dateHtml = w.date ? '<div class="work-date">' + w.date + '</div>' : '';
@@ -77,10 +76,10 @@
             var item = document.createElement('div');
             item.className = 'work-item';
             
-            // ▼▼▼ 複数タグを裏側に保存 ▼▼▼
-            item.dataset.tags = tagArray.join(',');
+            // 複数タグを裏側に保存
+            item.dataset.tags = cleanTags.join(',');
             
-            item.style.animationDelay = (i * 0.05) + 's';
+            item.style.animationDelay = (i * 0.15) + 's';
             
             if (w.url) {
                 var a = document.createElement('a');
@@ -101,18 +100,13 @@
         document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
         btn.classList.add('active');
         
-        var targetTag = btn.dataset.filter;
+        var targetTag = btn.dataset.filter.toLowerCase();
         document.querySelectorAll('.work-item').forEach(function(item) {
-            // ▼▼▼ フィルター処理：設定されたタグの中に、クリックしたボタンのタグが含まれているかチェック ▼▼▼
             var itemTags = item.dataset.tags.split(',');
             item.dataset.hidden = (targetTag !== 'all' && !itemTags.includes(targetTag)) ? 'true' : 'false';
         });
     });
   });
-</script></span>
-  </footer>
-  </main>
-      </nav>
-  </header>
-</body></title>
-  </head>
+</script>
+</body>
+</html>
