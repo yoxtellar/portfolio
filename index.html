@@ -45,42 +45,48 @@
   fetch('works.json')
     .then(function(r) { return r.json(); })
     .then(function(works) {
-          var grid = document.getElementById('worksGrid');
-          works.forEach(function(w, i) {
-                  var tagLabel = w.tag.replace('-', ' / ');
-                  var dateHtml = w.date ? '<div class="work-date">' + w.date + '</div>' : '';
-                  var inner = '<div class="thumb-wrap"><img src="' + w.thumb + '" alt="' + w.title + '" loading="lazy"><div class="work-overlay"><span class="overlay-arrow">&rarr;</span></div></div><div class="work-info"><div class="work-meta"><span class="work-tag">' + tagLabel + '</span>' + dateHtml + '</div><div class="work-title">' + w.title + '</div></div>';
-                  var item = document.createElement('div');
-                  item.className = 'work-item';
-                  item.dataset.tag = w.tag;
-                  item.style.animationDelay = (i * 0.05) + 's';
-                  if (w.url) {
-                            var a = document.createElement('a');
-                            a.href = w.url;
-                            a.target = '_blank';
-                            a.rel = 'noopener';
-                            a.innerHTML = inner;
-                            item.appendChild(a);
-                  } else {
-                            item.innerHTML = inner;
-                  }
-                  grid.appendChild(item);
-          });
+        var grid = document.getElementById('worksGrid');
+        works.forEach(function(w, i) {
+            var tagLabel = w.tag.replace('-', ' / ');
+            var dateHtml = w.date ? '<div class="work-date">' + w.date + '</div>' : '';
+
+            // 1. デフォルト画像のパス（用意したNo Image画像のファイル名に合わせてください）
+            var defaultImg = 'assets/images/default.jpg';
+            
+            // 2. JSONのthumbが空っぽ("")ならデフォルト画像を使う
+            var thumbSrc = w.thumb ? w.thumb : defaultImg;
+
+            // 3. imgタグの中に onerror を追加して、リンク切れの時もデフォルト画像を表示
+            var inner = '<div class="thumb-wrap"><img src="' + thumbSrc + '" onerror="this.src=\'' + defaultImg + '\'" alt="' + w.title + '" loading="lazy"><div class="work-overlay"><span class="overlay-arrow">&rarr;</span></div></div><div class="work-info"><div class="work-meta"><span class="work-tag">' + tagLabel + '</span>' + dateHtml + '</div><div class="work-title">' + w.title + '</div></div>';
+
+            var item = document.createElement('div');
+            item.className = 'work-item';
+            item.dataset.tag = w.tag;
+            item.style.animationDelay = (i * 0.05) + 's';
+            if (w.url) {
+                var a = document.createElement('a');
+                a.href = w.url;
+                a.target = '_blank';
+                a.rel = 'noopener';
+                a.innerHTML = inner;
+                item.appendChild(a);
+            } else {
+                item.innerHTML = inner;
+            }
+            grid.appendChild(item);
+        });
     });
 
   document.querySelectorAll('.filter-btn').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-            document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
-            btn.classList.add('active');
-            var tag = btn.dataset.filter;
-            document.querySelectorAll('.work-item').forEach(function(item) {
-                    item.dataset.hidden = (tag !== 'all' && item.dataset.tag !== tag) ? 'true' : 'false';
-            });
-      });
+    btn.addEventListener('click', function() {
+        document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        var tag = btn.dataset.filter;
+        document.querySelectorAll('.work-item').forEach(function(item) {
+            item.dataset.hidden = (tag !== 'all' && item.dataset.tag !== tag) ? 'true' : 'false';
+        });
+    });
   });
-</script>
-</body>
-</html>
 </script></span>
   </footer>
   </main>
