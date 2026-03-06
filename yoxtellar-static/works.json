@@ -1,0 +1,26 @@
+[
+  {
+    "title": "作品タイトルをここに",
+    "tag": "composer",
+    "thumb": "assets/images/work1.jpg",
+    "url": ""
+  },
+  {
+    "title": "作品タイトルをここに",
+    "tag": "live",
+    "thumb": "assets/images/work2.jpg",
+    "url": ""
+  },
+  {
+    "title": "作品タイトルをここに",
+    "tag": "release",
+    "thumb": "assets/images/work3.jpg",
+    "url": ""
+  },
+  {
+    "title": "作品タイトルをここに",
+    "tag": "vr-metaverse",
+    "thumb": "assets/images/work4.jpg",
+    "url": ""
+  }
+]
