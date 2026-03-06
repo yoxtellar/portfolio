@@ -1,7 +1,7 @@
 title: yoxtellar
 description: sound works
-url: "https://yamashoyotto.github.io"  # ← GitHubのユーザー名に合わせて変更
-baseurl: "/yoxtellar"
+url: "https://yoxtellar.github.io"  # ← GitHubのユーザー名に合わせて変更
+baseurl: "/portfolio"
 
 # Adobe Fonts embed code (typekit)
 # adobe_fonts_id: "XXXXXXX"  # ← use.typekit.net のIDを入れる
