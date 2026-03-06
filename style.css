@@ -203,6 +203,53 @@ main { padding-bottom: 80px; }
     font-weight: 300;
     color: var(--fg);
 }
+/* アコーディオンの土台（最初は高さ0） */
+.work-detail {
+    grid-column: 1 / -1; /* グリッドの端から端まで広げる */
+    max-height: 0;
+    overflow: hidden;
+    background: #0d0d0d;
+    transition: max-height 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    border-bottom: 0px solid var(--border);
+}
+
+/* 開いた時の状態 */
+.work-item.is-active .work-detail {
+    max-height: 500px; /* 十分な高さに設定 */
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 20px;
+}
+
+.detail-inner {
+    padding: 30px;
+    font-family: var(--font-body);
+}
+
+.detail-text {
+    font-size: 0.85rem;
+    line-height: 1.8;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.detail-link {
+    display: inline-block;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    border: 1px solid var(--accent);
+    padding: 8px 20px;
+    transition: all 0.3s;
+}
+
+.detail-link:hover {
+    background: var(--accent);
+    color: #000;
+}
+
+/* クリックできることを示すカーソル */
+.work-trigger { cursor: pointer; }
 
 /* Profile */
 .about-section {
