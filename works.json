@@ -1,13 +1,19 @@
 [
     {
+        "title": "土とアンビエント in 旧八女郡役所",
+        "tag": ["organizer", "release", "other"],
+        "thumb": "https://f4.bcbits.com/img/a2223205796_10.jpg",
+        "url": "https://yot-kun.bandcamp.com/album/in",
+        "date": "2025.11.12",
+        "description": "2025年11月12日、旧八女郡役所で開催された「土とアンビエント」で披露したアンビエントライブの音源を、アルバムとしてまとめました。電子音や環境音は、再生のたびにランダムな位置や確率で鳴るように設計しており、当日もPCを用いて、その場限りの音響体験をつくり出しました。本作は、その後あらためて再生した音源を録音し、まとめたものです。"
+    },
+    {
         "title": "大阪・関西万博 EXPOホール「シャインハット」投影用アンビエント作品 / こみゃくシミュレーション映像",
         "tag": "composer",
         "thumb": "assets/images/expo.png",
         "url": "https://x.com/lucknknock/status/1953773309708935658?s=20",
         "date": "2025.8.14",
-        "description": "万博のシンボル的空間での投影映像に向けた、10分を超えるアンビエント音響作品です。空間の広がりを意識したレイヤーの重なりと、生命の循環を感じさせる『こみゃくシミュレーション』に同期した動的な音響演出を行っています。"
-    },
-    {
+        "description": "PROGRAMMER/DIRECTOR:避雷（@lucknknock） COMPOSER:yoxteller(@yoxtellar)"
     },
     {
         "title": "Sanrio Virtual Festival 2025 — キヌ パフォーマンス 作曲・ミックス・マスタリング・サウンドデザイン",
@@ -15,14 +21,15 @@
         "thumb": "assets/images/sanrio2025.jpg",
         "url": "",
         "date": "2025.3.2",
-        "description": "SANRIO Virtual Festival 2025にて開催されたキヌ 7th live『トーチライト』のために書き下ろした楽曲です。Raindance Immersive 2025にてBEST MUSIC SHOWを受賞。深淵から希望へと向かう力強いサウンドデザインを目指しました。"
+        "description": "SANRIO Virtual Festival 2025にて開催されたキヌ 7th live『トーチライト』のために楽曲を書き、全体のミックスマスタリングをしました。Raindance Immersive 2025にてBEST MUSIC SHOWを受賞。力強いサウンドデザインを目指しました。"
     },
     {
         "title": "Musical Treasure Hunt—Spectral Remix / 新作サンリオキャラクターミニパレード 作曲・サウンドデザイン",
         "tag": ["composer", "metaverse"],
         "thumb": "assets/images/sanrio2024.jpg",
-        "url": "",
+        "url": "https://x.com/SANRIO_Vfes/status/1885615322352214031?s=20",
         "date": "2024.9.13"
+        "description": "作曲・編曲・サウンドデザインを担当しました"
     },
     {
         "title": "Sanrio Virtual Festival 2023 — キヌ パフォーマンス 作曲・ミックス・マスタリング・サウンドデザイン",
@@ -30,14 +37,21 @@
         "thumb": "https://img.youtube.com/vi/LwDbrmUhdN0/maxresdefault.jpg",
         "url": "https://youtu.be/LwDbrmUhdN0",
         "date": "2023.1.21"
+        "description": "新曲書き下ろしを担当しました"
     },
     {
         "title": "Perfect World meets Jimmy",
         "tag": "composer",
         "thumb": "assets/images/perfectworld.jpg",
-        "url": "",
+        "url": "https://soundcloud.com/yoxtellar/perfect-world-meets-jimmy",
         "date": "2022.9.2"
+        "description": "小説のための楽曲を制作しました"
     },
+
+
+
+
+    
     {
         "title": "トーチライト feat.kinu Single Release",
         "tag": "release",
@@ -46,11 +60,28 @@
         "date": "2025.6.29"
     },
     {
-        "title": "solitary departure",
+        "title": "Chaordic Way our intelligence 5",
         "tag": "release",
-        "thumb": "https://i1.sndcdn.com/artworks-P9kPR9mjLOL0iJDt-ktk4vA-t1080x1080.jpg",
-        "url": "https://soundcloud.com/yoxtellar/solitary-departure",
-        "date": "2024.12.25"
+        "thumb": "",
+        "url": "https://soundcloud.com/yoxtellar/chaordic-way",
+        "date": "2025.10.26"
+        "description": "ChaosとOrderの間をゆらゆらよろめき歩く身体感覚をひとつの曲にしました。10/26　M3にてリリースのコンピレーションアルバム「our intelligence 5」の6曲目に収録されます！"
+    },
+    {
+        "title": "Drawn in Dreams / our intelligence 4",
+        "tag": "release",
+        "thumb": "https://f4.bcbits.com/img/a3582631351_10.jpg",
+        "url": "https://soundcloud.com/yoxtellar/drown-in-dreams",
+        "date": "2025.4.27"
+        "description": "この曲は、sculpturedの新作コンピレーションアルバム『our intelligence 4』のTr.13に収録されています。「溺死」というテーマから着想を得て、過去の自分が一度水の中で終わりを迎え、新しい自分として浮かび上がってきたような感覚をもとに制作しました。"
+    },
+    {
+        "title": "Aetherbound / our intelligence 3",
+        "tag": "release",
+        "thumb": "https://f4.bcbits.com/img/a2263605764_10.jpg",
+        "url": "https://soundcloud.com/yoxtellar/aetherbound",
+        "date": "2025.4.27"
+        "description": "「our intelligence 3」に7曲目　yoxtellar - Aetherboundで参加しています。"
     },
     {
         "title": "Sound Adventure Log",
