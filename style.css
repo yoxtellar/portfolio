@@ -345,8 +345,12 @@ main { padding-bottom: 80px; }
 
 .contact-email:hover { color: var(--accent); }
 
-.social-links { display: flex; gap: 20px; }
-
+.social-links {
+    display: flex;
+    gap: 20px;
+    animation: fadeIn 2.4s cubic-bezier(0.25, 1, 0.5, 1) both;
+    animation-delay: 0.8s; /* お好みで調整 */
+}
 .social-links a {
     font-size: 0.62rem;
     color: var(--muted);
