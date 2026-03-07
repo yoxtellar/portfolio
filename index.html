@@ -76,6 +76,16 @@
             var defaultImg = 'assets/images/yoxtellar_logo_A_reverse.png';
             var thumbSrc = w.thumb ? w.thumb : defaultImg;
             var description = w.description || 'No description available.';
+            var embedHtml = w.embed ? `
+              <iframe 
+                  width="100%" 
+                  height="120" 
+                  scrolling="no" 
+                  frameborder="no" 
+                  allow="autoplay"
+                  style="margin-bottom:16px; filter:invert(1) hue-rotate(180deg);"
+                  src="${w.embed}">
+              </iframe>` : '';
             var linkHtml = w.url ? `<a href="${w.url}" target="_blank" rel="noopener" class="detail-link">View Project &rarr;</a>` : '';
 
             // アイテム要素の作成
@@ -100,6 +110,7 @@
                 </div>
                 <div class="work-detail">
                     <div class="detail-inner">
+                        ${embedHtml}
                         <div class="detail-text">${description}</div>
                         ${linkHtml}
                     </div>
