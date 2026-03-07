@@ -44,20 +44,13 @@
 
 
 
-    
-    {
-        "title": "トーチライト feat.kinu Single Release",
-        "tag": "release",
-        "thumb": "https://f4.bcbits.com/img/a1605349625_10.jpg",
-        "url": "https://yot-kun.bandcamp.com/album/feat-kinu-2",
-        "date": "2025.6.29",
-        "description": "SANRIO Virtual Festival 2025にて開催されたキヌ 7th live『トーチライト』のための楽曲"
-    },
+
     {
         "title": "Chaordic Way / our intelligence 5 参加楽曲",
         "tag": "release",
         "thumb": "assets/images/oi5.png",
         "url": "https://soundcloud.com/yoxtellar/chaordic-way",
+        "embed": "https://w.soundcloud.com/player/?url=https://soundcloud.com/yoxtellar/chaordic-way&color=%23c8ff00&auto_play=false&hide_related=true&show_comments=false&show_user=false",
         "date": "2025.10.26",
         "description": "ChaosとOrderの間をゆらゆらよろめき歩く身体感覚をひとつの曲にしました。10/26　M3にてリリースのコンピレーションアルバム「our intelligence 5」の6曲目に収録されます！"
     },
