@@ -237,25 +237,6 @@ main { padding-bottom: 80px; }
     transition: max-height 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* スマホ用（メディアクエリ）の中を修正 */
-@media (max-width: 720px) {
-    .grid { 
-        grid-template-columns: repeat(2, 1fr); 
-    }
-    .work-detail {
-        grid-column: 1 / span 2; /* 2列の時は2列分広がる */
-    }
-}
-
-@media (max-width: 460px) {
-    .grid { 
-        grid-template-columns: 1fr; /* 1列 */
-    }
-    .work-detail {
-        grid-column: 1 / span 1; /* 1列の時は1列分広がる */
-    }
-}
-
 /* 開いた時の状態 */
 .work-item.is-active .work-detail {
     max-height: 500px; /* 十分な高さに設定 */
