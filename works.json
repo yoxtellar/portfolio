@@ -51,7 +51,7 @@
 
 
 
-
+//RELEASE
     
     {
         "title": "トーチライト feat.kinu Single Release",
@@ -114,13 +114,6 @@
         "date": "2023.5.14"
     },
     {
-        "title": "Friend Ship",
-        "tag": "release",
-        "thumb": "assets/images/friend_ship.jpg",
-        "url": "https://soundcloud.com/yoxtellar/friend-ship",
-        "date": "2022.7.11"
-    },
-    {
         "title": "Life goes on EP",
         "tag": "release",
         "thumb": "https://i1.sndcdn.com/artworks-XD0dTPDPtX5JWVUz-mxXHPA-t1080x1080.jpg",
@@ -155,6 +148,10 @@
         "url": "https://yot-kun.bandcamp.com/album/e-vacillation",
         "date": "2019.5.20"
     },
+
+
+
+    //LIVE
     {
         "title": "our intelligence 3 release party 出演@新宿SPACE",
         "tag": "live",
