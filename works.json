@@ -1,5 +1,5 @@
 [
-    //WORKS
+    //WORKSーーーーーーーーーーーーーーーーーー
     {
         "title": "土とアンビエント in 旧八女郡役所",
         "tag": ["event organize", "other"],
@@ -33,25 +33,17 @@
         "description": "作曲・編曲・サウンドデザインを担当しました"
     },
     {
-        "title": "Sanrio Virtual Festival 2023 — キヌ パフォーマンス 作曲・ミックス・マスタリング・サウンドデザイン",
+        "title": "Sanrio Virtual Festival 2023 — キヌ パフォーマンス 書き下ろし楽曲制作",
         "tag": ["composer", "metaverse"],
-        "thumb": "https://img.youtube.com/vi/LwDbrmUhdN0/maxresdefault.jpg",
+        "thumb": "https://f4.bcbits.com/img/a1338551499_10.jpg",
         "url": "https://youtu.be/LwDbrmUhdN0",
         "date": "2023.1.21",
         "description": "新曲書き下ろしを担当しました"
     },
-    {
-        "title": "Perfect World meets Jimmy",
-        "tag": "composer",
-        "thumb": "assets/images/perfectworld.jpg",
-        "url": "https://soundcloud.com/yoxtellar/perfect-world-meets-jimmy",
-        "date": "2022.9.2",
-        "description": "小説のための楽曲を制作しました"
-    },
 
 
 
-//RELEASE
+//RELEASEーーーーーーーーーーーーーーーーーー
     
     {
         "title": "トーチライト feat.kinu Single Release",
@@ -62,7 +54,7 @@
         "description": "SANRIO Virtual Festival 2025にて開催されたキヌ 7th live『トーチライト』のための楽曲"
     },
     {
-        "title": "Chaordic Way / our intelligence 5",
+        "title": "Chaordic Way / our intelligence 5 参加楽曲",
         "tag": "release",
         "thumb": "assets/images/oi5.png",
         "url": "https://soundcloud.com/yoxtellar/chaordic-way",
@@ -70,7 +62,7 @@
         "description": "ChaosとOrderの間をゆらゆらよろめき歩く身体感覚をひとつの曲にしました。10/26　M3にてリリースのコンピレーションアルバム「our intelligence 5」の6曲目に収録されます！"
     },
     {
-        "title": "Drawn in Dreams / our intelligence 4",
+        "title": "Drawn in Dreams / our intelligence 4 参加楽曲",
         "tag": "release",
         "thumb": "https://f4.bcbits.com/img/a3582631351_10.jpg",
         "url": "https://soundcloud.com/yoxtellar/drown-in-dreams",
@@ -78,7 +70,7 @@
         "description": "この曲は、sculpturedの新作コンピレーションアルバム『our intelligence 4』のTr.13に収録されています。「溺死」というテーマから着想を得て、過去の自分が一度水の中で終わりを迎え、新しい自分として浮かび上がってきたような感覚をもとに制作しました。"
     },
     {
-        "title": "Aetherbound / our intelligence 3",
+        "title": "Aetherbound / our intelligence 3 参加楽曲",
         "tag": "release",
         "thumb": "https://f4.bcbits.com/img/a2263605764_10.jpg",
         "url": "https://soundcloud.com/yoxtellar/aetherbound",
@@ -86,63 +78,58 @@
         "description": "「our intelligence 3」に7曲目　yoxtellar - Aetherboundで参加しています。"
     },
     {
-        "title": "Sound Adventure Log",
+        "title": "Sound Adventure Log - M3 self release",
         "tag": "release",
         "thumb": "assets/images/SAL-digital-jacket.png",
         "url": "https://youtu.be/DIWOgh0tSj4?si=q9YJ5VGAm6nFH2uA",
-        "date": "2024.10.27"
+        "date": "2024.10.27",
+        "description": "「our intelligence 3」に7曲目　yoxtellar - Aetherboundで参加しています。"
     },
     {
-        "title": "emergence!",
+        "title": "emergence! - M3 self release",
         "tag": "release",
-        "thumb": "https://img.youtube.com/vi/JNLpsOv8GI8/maxresdefault.jpg",
+        "thumb": "https://f4.bcbits.com/img/a1932860383_10.jpg",
         "url": "https://youtu.be/JNLpsOv8GI8",
-        "date": "2023.10.29"
-    },
-    {
-        "title": "wisteria",
-        "tag": "release",
-        "thumb": "https://img.youtube.com/vi/R0Ij85PKCKI?si=t5oEvnHH_9-FIyoC/maxresdefault.jpg",
-        "url": "https://youtu.be/R0Ij85PKCKI?si=t5oEvnHH_9-FIyoC",
-        "date": "2023.10.29"
+        "date": "2023.10.29",
+        "description": "「our intelligence 3」に7曲目　yoxtellar - Aetherboundで参加しています。"
     },
     {
         "title": "はじまりはおわり、feat. kinu",
         "tag": "release",
-        "thumb": "https://img.youtube.com/vi/LwDbrmUhdN0/maxresdefault.jpg",
+        "thumb": "https://f4.bcbits.com/img/a1338551499_10.jpg",
         "url": "https://yot-kun.bandcamp.com/album/feat-kinu",
         "date": "2023.5.14"
     },
     {
-        "title": "Life goes on EP",
+        "title": "Life goes on EP - self release",
         "tag": "release",
         "thumb": "https://i1.sndcdn.com/artworks-XD0dTPDPtX5JWVUz-mxXHPA-t1080x1080.jpg",
         "url": "https://youtu.be/DlF3gm22Hm4?si=9lLOafVm5dXbmfFE",
         "date": "2022.4.15"
     },
     {
-        "title": "My Brave Story EP",
+        "title": "My Brave Story EP - self release",
         "tag": "release",
         "thumb": "https://f4.bcbits.com/img/a0162034650_10.jpg",
         "url": "https://yot-kun.bandcamp.com/album/my-brave-story-ep",
         "date": "2021.11.14"
     },
     {
-        "title": "Perfect World",
+        "title": "Perfect World - self release",
         "tag": "release",
-        "thumb": "assets/images/perfect_world.jpg",
+        "thumb": "https://f4.bcbits.com/img/a1278456602_10.jpg",
         "url": "https://youtu.be/IXncPcRNziw",
         "date": "2021.7.16"
     },
     {
-        "title": "Flowers in the Cage",
+        "title": "Flowers in the Cage - self release",
         "tag": "release",
-        "thumb": "assets/images/flowers_in_the_cage.jpg",
-        "url": "",
+        "thumb": "https://f4.bcbits.com/img/a4045546380_10.jpg",
+        "url": "https://yot-kun.bandcamp.com/album/flowers-in-the-cage",
         "date": "2020.12.4"
     },
     {
-        "title": "e-vacillation",
+        "title": "e-vacillation - M3 self release",
         "tag": "release",
         "thumb": "https://f4.bcbits.com/img/a3462619655_10.jpg",
         "url": "https://yot-kun.bandcamp.com/album/e-vacillation",
@@ -151,7 +138,7 @@
 
 
 
-    //LIVE
+    //LIVEーーーーーーーーーーーーーーーーーー
     {
         "title": "our intelligence 3 release party 出演@新宿SPACE",
         "tag": "live",
